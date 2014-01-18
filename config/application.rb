@@ -54,6 +54,9 @@ module NeoBlog
     # Configure where the neo4j database should exist
     config.neo4j.storage_path = "#{config.root}/db/neo4j-#{Rails.env}"
 
+    # Ensure fonts from bootstrap 3 loads 
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
+
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
