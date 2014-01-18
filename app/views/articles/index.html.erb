@@ -1,9 +1,7 @@
-<h1>Listing articles</h1>
-
-<table>
+<table class="table table-striped">
   <tr>
     <th>Content</th>
-    <th>Published at</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,14 +10,19 @@
 <% @articles.each do |article| %>
   <tr>
     <td><%= article.content %></td>
-    <td><%= article.published_at %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '#', class: 'btn btn-default', id: 'comment' do  %> <i class="glyphicon glyphicon-user"></i><% end %></td>
+    <td><%= link_to article, class: 'btn btn-default', id:'show' do  %> <i class="glyphicon glyphicon-eye-open"></i><% end %></td>
+    <td><%= link_to edit_article_path(article),class: 'btn btn-default', id: 'edit' do  %> <i class="glyphicon glyphicon-edit"></i><% end %></td>
+    <td><%= link_to article, method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-default', id: 'delete' do  %> <i class="glyphicon glyphicon-trash"></i><% end %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Article', new_article_path %>
+
+
+
+
+
+
