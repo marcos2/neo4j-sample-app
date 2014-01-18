@@ -50,6 +50,7 @@ group :development, :test do
 end
 
 gem "neo4j", ">= 2.3.0"
-gem 'neo4j-admin'
 
-gem "puma"
+gem "puma" 
+
+

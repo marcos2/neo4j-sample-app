@@ -2,9 +2,6 @@
  require 'neo4j'
 
 
- Article.delete_all
- Comment.delete_all
-
 
  article_array =  []
 
@@ -25,6 +22,8 @@
   end
  end
 
+
+ binding.pry 
 
 
 
