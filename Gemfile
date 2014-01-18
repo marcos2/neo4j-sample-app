@@ -45,6 +45,8 @@ group :development, :test do
   gem "capybara_minitest_spec"
   gem "minitest-colorize"
   gem "minitest-focus"
+  gem 'faker'
+  gem 'pry'
 end
 
 gem "neo4j", ">= 2.3.0"
