@@ -5,4 +5,5 @@ class Article < Neo4j::Rails::Model
   has_n(:comments).to(Comment)
 
 
+
 end

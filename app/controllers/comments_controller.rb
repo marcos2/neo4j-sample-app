@@ -44,7 +44,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to articles_path, notice: 'Comment was successfully created.' }
         format.json { render json: @comment, status: :created, location: @comment }
       else
         format.html { render action: "new" }
@@ -52,6 +52,7 @@ class CommentsController < ApplicationController
       end
     end
   end
+
 
   # PUT /comments/1
   # PUT /comments/1.json

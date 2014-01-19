@@ -18,12 +18,8 @@
   number_of_comments = rand(1..30)
 
   1.upto number_of_comments do 
-    article.comments << Comment.new(:content => Faker::Lorem.sentence(4,false,10), :published_at => Time.now )
+    article.comments << Comment.create(:content => Faker::Lorem.sentence(4,false,10), :published_at => Time.now )
+    article.save
   end
  end
-
-
- binding.pry 
-
-
 

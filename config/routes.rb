@@ -4,7 +4,11 @@ NeoBlog::Application.routes.draw do
   resources :articles
   resources :users
 
-  root :to => 'articles#index' 
+  root :to => 'articles#index'
+
+  match "/new_comment", to: 'Articles#new_comment', as: 'index_create_comment'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
