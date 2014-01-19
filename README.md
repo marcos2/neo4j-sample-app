@@ -1,5 +1,5 @@
 
-## Neo4j and rails 4 
+## Neo4j and rails 3
 
 
 ### This is a training repo with the following stack:
