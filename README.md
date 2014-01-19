@@ -28,7 +28,12 @@
 ### Online
 
 
-   Application is deployed on Heroku [here](http://rohonneo4j.herokuapp.com/)
+   Application is deployed on Heroku [here](http://rohonneo4j.herokuapp.com/) without `heroku rake db:seed`
+
+
+### Basic UML Diagram
+
+![UML Diagram](./uml.png)
 
 
 
