@@ -10,14 +10,11 @@
 <% else %>
     <h4>Comments:</h4>
     <div class="alert alert-success">
-       <% @comments.each do |comment,index| %>
-       <%= index %>
-       <%= comment.content %>
+       <% @comments.each do |comment| %>
+         <li><%= comment.content %></li>
       <% end %>
    </div>
 <% end %>
-
-
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>

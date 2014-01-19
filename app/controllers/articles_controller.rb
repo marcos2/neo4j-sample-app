@@ -8,12 +8,9 @@ class ArticlesController < ApplicationController
     article_id = params[:article_id]
     @article = Article.find article_id
     @comment = @article.comments.build
-
-
     respond_to do  |format|
     format.js
     end
-
 
   end
 
