@@ -17,17 +17,45 @@
   </tr>
 
   <tr>
+    <td><button class="btn btn-info" onclick="addComment(<%= article.id %>);">new comment</button></td>
   </tr>
-  <td><%= link_to 'new comment', index_create_comment_path(:article_id => article.id), { :remote => true, :class => 'btn btn-info' } %>
-  <tr class="comments" style="display: none">
-    <td><div id="comment_<%= article.id %>"
-    </td>                           
+
+  <tr class="comments" style="display:none" id="comment_row_<%= article.id %>">
+    <td><div id="comment_<%= article.id %>"></div></td>
   </tr>
 
 <% end %>
 </table>
 
+<div id="kokot"></div>
+
 <br />
+
+<script>
+
+    var addComment = function(article_id){
+
+        var element = '#comment_' + article_id ;
+        var comment_row = '#comment_row_' + article_id;
+
+        $(element).load('/comments/new?' + $.param( { article_id : article_id }));
+        $(comment_row).show();
+    };
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

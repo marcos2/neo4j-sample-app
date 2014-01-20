@@ -2,20 +2,6 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
 
-
-  def new_comment
-
-    article_id = params[:article_id]
-    @article = Article.find article_id
-    @comment = @article.comments.build
-    respond_to do  |format|
-    format.js
-    end
-
-  end
-
-
-
   def index
     @articles = Article.all
 

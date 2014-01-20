@@ -25,15 +25,18 @@ class CommentsController < ApplicationController
   # GET /comments/new.json
   def new
 
-   @comment = Comment.new
-
-
+    article_id = params[:article_id]
+    @article = Article.find article_id
+    @comment = @article.comments.build params[:comment]
 
 
     respond_to do |format|
+      format.js
       format.html # new.html.erb
       format.json { render json: @comment }
     end
+
+
   end
 
   # GET /comments/1/edit
@@ -44,7 +47,9 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(params[:comment])
+    article_id = params[:comment][:article_id].to_i
+    @article = Article.find article_id
+    @comment = @article.comments.create params[:comment]
 
     respond_to do |format|
       if @comment.save

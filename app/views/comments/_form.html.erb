@@ -14,7 +14,10 @@
   <div class="field">
     <%= f.label :content%><br />
     <%= f.text_area :content, :cols => '150', :rows => '5', :placeholder => 'text goes here...' %>
+    <%= f.hidden_field :article_id, :value => @article.id %>
   </div>
+
+
 
   <div class="actions">
     <%= f.submit  :class => 'btn btn-danger' %>
