@@ -49,6 +49,7 @@ group :development, :test do
 end
 
 gem "neo4j", ">= 2.3.0"
+gem 'neography'
 
 gem "puma" 
 gem 'faker' 
