@@ -45,6 +45,7 @@ group :development, :test do
   gem "capybara_minitest_spec"
   gem "minitest-colorize"
   gem "minitest-focus"
+  gem 'selenium-webdriver'
   gem 'pry'
 end
 

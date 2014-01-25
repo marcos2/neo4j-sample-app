@@ -8,6 +8,8 @@
   </tr>
 
 <% @articles.each do |article| %>
+
+ <div class="wrapper" id="data_<%=article.id%>">
   <tr>
     <td width="80%"><%= link_to "#{article.content}", article %></td>
 
@@ -21,12 +23,14 @@
   </tr>
 
   <tr>
-    <td><button class="btn btn-info" onclick="addComment(<%= article.id %>);">new comment</button></td>
+    <td><button id="button_<%=article.id %>" class="btn btn-info" onclick="addComment(<%= article.id %>);">new comment</button></td>
   </tr>
 
   <tr class="comments" style="display:none" id="comment_row_<%= article.id %>">
     <td><div id="comment_<%= article.id %>"></div></td>
   </tr>
+
+ </div>
 
 <% end %>
 </table>
@@ -45,10 +49,7 @@
         $(comment_row).show();
     };
 
-   $('#new_comment').submit(function(){
 
-       alert('submit');
-   })
 
 
 </script>

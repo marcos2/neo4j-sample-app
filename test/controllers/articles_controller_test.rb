@@ -3,13 +3,13 @@ require "test_helper"
 describe ArticlesController do
 
   before do
-    @article = articles(:one)
+    @article = Article.create(:content => 'lorem ipsum')
   end
 
   it "must get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:articles)
+    assert_not_nil assigns(@article)
   end
 
   it "must get new" do

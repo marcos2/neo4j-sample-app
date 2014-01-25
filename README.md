@@ -9,8 +9,10 @@
 
 
 
+
 ### Installation
 
+    rvm use jruby
 
     git clone https://github.com/mrohon/neo4j-sample-app.git
 
@@ -21,6 +23,8 @@
     neo4j start
 
     rake db:seed
+
+    rake db:seed ENV=test
 
     rails s
 
